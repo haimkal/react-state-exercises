@@ -11,7 +11,7 @@ class Clock extends Component {
 		super(props)
 		this.state = {
 			date: new Date(),
-			update: this.update() // is it ok the in the constructor?
+			update: this.update() // is it ok that the function call is in the constructor?
 		}
 	}
 
