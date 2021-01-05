@@ -7,14 +7,31 @@ import React, { Component } from 'react';
  */
 
 class Clock extends Component {
-	render() {
+	constructor(props) {
+		super(props)
+		this.state = {
+			date: new Date(),
+			update: this.update() // why it shuld be here?
+		}
+	}
+
+	update() {
+		setInterval(()=> {
+			this.setState ({
+				date: new Date()
+			})
+		}, 1000)
+	}
+
+	render() { //what's toLocaleString?
 		return (
 			<div>
 				<h1>Clock</h1>
-				The time is:
+				the time is: {this.state.date.toLocaleString("en-us", {hour: "2-digit", minute: "2-digit", second: "2-digit"})}
 			</div>
-		);
+		)
 	}
 }
+
 
 export default Clock;

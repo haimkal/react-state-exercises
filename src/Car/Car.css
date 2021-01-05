@@ -5,3 +5,19 @@
     background: silver;
     text-align: center;
 }
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: rgb(0, 19, 104);
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: rgb(0, 162, 13);
+}

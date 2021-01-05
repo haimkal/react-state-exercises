@@ -16,17 +16,26 @@ class Counter extends Component {
 		};
 	}
 
+	
 	increase() {
-		this.setState({
-			num: this.state.num + 1
-		});
-	}
+				this.setState({
+					num: Math.min(this.state.num + 1, 20)
+			});
+			
+		}
 
 	decrease() {
-		this.setState({
-			num: this.state.num - 1
-		});
-	}
+			this.setState({
+				num: Math.max(this.state.num - 1, 0)
+			});
+		}
+	
+
+	increaseBy10() {
+			this.setState({
+				num: Math.min(this.state.num + 10, 20)
+			});
+		}
 
 	render() {
 		return (
@@ -34,6 +43,7 @@ class Counter extends Component {
 				<h1>Counter: </h1>
 				<button onClick={this.increase.bind(this)}>Increase</button>
 				<button onClick={this.decrease.bind(this)}>Decrease</button>
+				<button onClick={this.increaseBy10.bind(this)}>Increase by 10</button>
 				<span>{this.state.num}</span>
 			</div>
 		);
