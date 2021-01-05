@@ -11,7 +11,7 @@ class Clock extends Component {
 		super(props)
 		this.state = {
 			date: new Date(),
-			update: this.update() // why it shuld be here?
+			update: this.update() // is it ok the in the constructor?
 		}
 	}
 
@@ -23,7 +23,7 @@ class Clock extends Component {
 		}, 1000)
 	}
 
-	render() { //what's toLocaleString?
+	render() { 
 		return (
 			<div>
 				<h1>Clock</h1>
